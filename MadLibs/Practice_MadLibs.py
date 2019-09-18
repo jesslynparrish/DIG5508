@@ -5,3 +5,4 @@ verbs = ["runs", "jumps", "eats", "cooks", "toasts", "pets", "flips", "types"]
 
 
 print("The Girl " + random.choice(verbs) + " until she fell asleep")
+print("In the morning she ") + random.choice(verbs) + " half asleep."
