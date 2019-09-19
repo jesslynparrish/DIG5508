@@ -11,3 +11,4 @@ print("When she got to work via " + random.choice(nouns) + " her boss was " + ra
 print("However her co-worker starts " + random.choice(verbs) + " to distract their boss.")
 print("She " + random.choice(verbs) + " into her office, where she encountered " + random.choice(nouns))
 print("Cautiously she walks towards her desk as the " + random.choice(nouns) + " starts to " + random.choice(verbs))
+print("While sitting at her desk, her phone "  + random.choice(verbs) + " scaring the " + random.choice(nouns) + " out of her, causing her to " + random.choice(verbs))
