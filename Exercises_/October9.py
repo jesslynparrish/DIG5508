@@ -126,3 +126,4 @@ for i in range(len(wyatt)-1):
         pairs = pairs + 1
 
 #%%
+#Paused on page 10/29 of chapter 8
