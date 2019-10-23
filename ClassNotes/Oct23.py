@@ -99,11 +99,26 @@ print(x)
  zip = "334440099"
  x = re.search("^\d{5}(-\d{4})?$", zip)
  print(x)
-
+# Principle of programming: don't repeat yourself. One option is creating a function that you can use multiple times
 # Remember you can have a cheat sheet handy! One used in class: https://www.debuggex.com/cheatsheet/regex/python
 #%%
 
 # Time of day (with groups for each part)
+
+time = "5pm"
+time2 = "1400"
+time3 = "11:00"
+time4 = "13:00am"
+time5 = "9:02pm"
+
+regexpression = "^([1-9]|1[0-2])(:\d\d)?[ap]m?$"
+print(re.search(regexpression, time))
+print(re.search(regexpression, time2))
+print(re.search(regexpression, time3))
+print(re.search(regexpression, time4))
+print(re.search(regexpression, time5))
+
+
 # phone number (either with or without area code)
 
 #%%
