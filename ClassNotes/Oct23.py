@@ -41,6 +41,9 @@ They are also called Capture Groups
 
 #%%
 #%%
+# A class is a function with valuables associated with it
+#Classes do not use parameter list
+#using a period calls a method in a class
 
 class MyClass:
     """A simple example class"""
@@ -125,5 +128,16 @@ print(re.search(regexpression, time5))
 txt = "aaaaaaaaa"
 x = re.search("a+", txt)
 print(x)
+
+#%%
+#Pixels:
+# do i need to install PIL ?
+from PIL import Image
+#%%
+mode = 'RGBA'
+size = (100, 100)
+color = (0, 255, 0, 255)
+ourimage = Image.new(mode, size, color)
+ourimage
 
 #%%
