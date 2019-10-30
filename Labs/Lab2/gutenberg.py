@@ -1,10 +1,10 @@
 #%%
-#I originally did this in the jupyter notebook file, for some reason it wouldn't save or allow me to commit changes to the github file, so I copied my work over to this python file.
 # [2-1] ON YOUR OWN:
 
 # Choose a text that was not previously analyzed above from Project Gutenberg.
 # 1. Write code that retrieves and writes the text to a file in the current projeect.ZeroDivisionError
 
+#Okay, for this problem, I thought it was fairly similar to the code that was laid out in the beginning of this jupyter notebook and the main thing that needed to be changed was the path to the new text file.
 import gutenberg
 from gutenberg.acquire import load_etext
 from gutenberg.cleanup import strip_headers
@@ -19,11 +19,14 @@ source.close()
 # 2. Write code that retrieves the text (if downloaded) 
 
 source = open('Labs/Lab2/frankenstein.txt','w',encoding="utf-16",newline='\n')
+
+#I copied code from earlier in this notebook file and changed the path to the new text file
 #%%
 # 3. Create a TextBlob from the string that was retrieved either by API or the that contains only the contents of the text. This may involve locating the end of the header. Save the resulting TextBlob for use in the following cells in the variable "gut_text"
 
 text = strip_headers(load_etext(2701)).strip()
 blob = TextBlob(text)
+#I don't really understand how TextBlob works, this was purely guesswork.
 #%%
 # [2-2] ON YOUR OWN:
 
@@ -38,6 +41,7 @@ for key, sentence in enumerate(blob.sentences):
         max = len(sentence.words)
         index = key
         print(result)
+
 #%%
 # [2-3] ON YOUR OWN:
 
