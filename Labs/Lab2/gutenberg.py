@@ -1,4 +1,5 @@
 #%%
+#A big problem I had with both parts of Lab 2 is that the Jupyter notebooks wouldn't show me any results - it would give me error messages, but not if anything happened or not. I don't know if this is because I didn't have a command to print results or if there was another problem.
 # [2-1] ON YOUR OWN:
 
 # Choose a text that was not previously analyzed above from Project Gutenberg.
