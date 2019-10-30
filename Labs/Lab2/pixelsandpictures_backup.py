@@ -65,6 +65,9 @@ def modify(image):
     for x: original_image(50, 50, (3,40,252,255))
     for y: greyscale_image(50, 50, (0.2126*3, 0.7152*40, 0.0722*252,255))
     print(image)  
+
+#I did not try the code described in chapter 11, I was trying to create a function that would modify the image with x being the original value and y being the modified image, or the image with a "luminance" 
+#As we discuss this in class, I realize I was more off base than I thought. Chapter 11 is making a bit more sense as we are discussing these problems in class - to an extent. I hope i remember this stuff after I leave class
 #%%
 # [2-8] ON YOUR OWN:
 # Write a function that applies the grayscale method to all of the image files in a directory.
