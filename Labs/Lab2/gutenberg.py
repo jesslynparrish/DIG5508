@@ -30,18 +30,38 @@ blob = TextBlob(text)
 #I don't really understand how TextBlob works, this was purely guesswork.
 #%%
 # [2-2] ON YOUR OWN:
-
+from operator import itemgetter
 # Write code that finds the top 5 longest sentences in the work. 
 
 #My logic here is that by changing the max, it should increase the amount of sentences given for the output
-
-max = 6
+blob = ("This is the longest. No this is. Nope, I am. No. Yes.") #Why do we need the blob?
+list = []
+list.append(0)
+list.append(4)
+list.append(100)
+list.append(40)
+list
+[0,4,100,40]
+sorted(list)
+#tuple is a 2-dimensional array
+#we're using a tuple because it has a set/unchangeable value
+#a splice is a subset of a list
+    # example of splice code: list[-5:] - this command would give the last 5 items in a list
+#the index refers to the point before the item
+#you're sorting the list in a tuple, with the tuple - i do not understand how you get the 5 sentences. I understand that once you have the 5 sentences you can put them in a tuple, but how do we modify the function to get the 5 longest sentences and not just the one longest sentence?!?!
+from textblob import TextBlob
+mylist = []
+max = 0
 index = 0
 for key, sentence in enumerate(blob.sentences):
-    if(len(sentence.words) <= max):
+    mylist.append((sentence,len(sentence.words)))
+    if(len(sentence.words) < max):
+        #mytuple = (sentence,len)
         max = len(sentence.words)
         index = key
         print(result)
+
+sorted(mylist,key=itemgetter(2))
 
 #%%
 # [2-3] ON YOUR OWN:
