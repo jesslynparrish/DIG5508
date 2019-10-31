@@ -22,4 +22,14 @@
     #goals are to minimize friction and to maximize support for media programming
     #"sketches" are project files that cotain code, assets, & a mode
 #Lab 2 common problems
-    
+
+
+#Processing notes:
+    #Processing uses Java
+    #java is an interpreted langauge
+    #he will post the slides from class if you need to refer to it
+    #blocks of code are interpreted with {} (i think? or is it JS?)
+    #processing is a large library of functions that can be used
+#Final Project:
+    #could take a Processing element and expand on it, add detail to it
+    #interactive design work? you're interested in that
