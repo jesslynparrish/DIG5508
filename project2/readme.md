@@ -1,0 +1,1 @@
+Please find my Free Project 2 in this subdirectory. I took an attempt at [Free Project 10-1] Cell-by-Cell Generator and managed to create an image generator (it can create boxes of different sizes and colors).
