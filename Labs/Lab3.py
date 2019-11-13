@@ -6,7 +6,7 @@ This lab is a cumulative review of each of the core topics of this course so far
 A **variable** represents a *named location* in a program that holds a **value**. At each line, every name that is available has a value. That value may change. Programming variables are different from mathematical variables. In math, an equation denotes a set of values that consists of known and unknown quantities or relationships. In programming, variables do not represent a single quantity, but rather a location in *memory*.
 
 In Python, variables are declared by giving them a name that is not a keyword, and which uses the **assignment operator**, ```=```.
-
+#%%
 ``` python
 # These are all variables
 # Empty string
@@ -126,8 +126,74 @@ The function should:
 1. Change a visual attribute of the car, and this change should be reflected in the display or drive function.
 2. Change an instance variable associated with the car class.
 
+class Car(object):
+# The Constructor is defined with arguments.
+    def __init__(self, c, xpos, yneg, xspeed):
+        self.c = c
+        self.xpos = xpos
+        self.yneg = yneg
+        self.xspeed = xspeed
+        
+    def display(self):
+        stroke(0)
+        fill(self.c)
+        rectMode(LEFT)
+        rect(self.xpos, self.yneg, 20, 10);
+    #for this first exercise, I changed the rectMode from CENTER to LEFT
+    #The instance variable I changed was self.ypos to self.yneg
+    def drive(self):
+        self.xpos = self.xpos + self.xspeed;
+        if self.xpos > width:
+            self.xpos = 0
+    
+myCar1 = Car(color(255, 0, 0), 0, 100, 2)
+myCar2 = Car(color(0, 255, 255), 0, 10, 1)
+    
+def setup():
+size(200,200)
+
+def draw(): 
+  background(255)
+  myCar1.drive()
+  myCar1.display()
+  myCar2.drive()
+  myCar2.display()
+
 ### **3-2.** (2pts) Interactivity
 Make the function authored in 3-1 occur when the user presses a key on the keyboard (space key). Look at the example code for keyboard events for guidance.
+
+#reference of the function in 3-1
+let regexp1 = /a+/;
+let testString1 = "aaaaa";
+console.log(testString1.match(regexp1));
+let testString2 = "bbbbb";
+console.log(testString2.match(regexp1));
+
+#from checking the reading, this is a function reference for when a key is pressed:
+def setup():
+    size(100, 100)
+    strokeWeight(4)
+
+def draw():
+    background(204)
+    # If the 'A' key is pressed draw a line
+    if ((keyPressed) and (key == 'A')):
+        line(50, 25, 50, 75)
+    else:   # Otherwise, draw an ellipse
+        ellipse(50, 50, 50, 50)
+
+#my attempt:
+def text():
+    if ((keyPressed) and (key == 'space key')):
+        let regexp1 = /a+/;
+        let testString1 = "aaaaa";
+        console.log(testString1.match(regexp1));
+    l   et testString2 = "bbbbb";
+        console.log(testString2.match(regexp1));
+    else: #key other than space bar is pressed
+        (key pressed):
+        print("wrong key pressed")
+#I know there's something i missed, and I am trying to figure out how to incorporate the function into the right setup, but it is definitely off. I'm sorry I'm such a poor student.
 
 ### **3-3.** (2pts) New Object
 Create a new class that displays a visual representation using similar methods to Car. 
@@ -137,6 +203,41 @@ Create several of these using random starting parameters in the setup function.
 You should save them to an array and update them each frame. 
 
 An idea would be trees or rocks, but they could also be houses.
+
+#i'm going to name my class 'Flower', and am following the structure used for the car class
+#Not sure at all how to make it randomly generated, my initial goal is to just make sure i can modify the initial code.
+class Flower(object):
+# The Constructor is defined with arguments.
+    def __init__(self, c, xpos, ypos, xspeed):
+        self.c = c
+        self.xpos = xpos
+        self.ypos = ypos
+        self.xspeed = xspeed
+        
+    def display(self):
+        stroke(0)
+        fill(self.c)
+        rectMode(CENTER)
+        rect(self.xpos, self.ypos, 40, 30);
+    
+    def drive(self):
+        self.xpos = self.xpos + self.xspeed;
+        if self.xpos > width:
+            self.xpos = 0
+    
+myFlower1 = Flower(color(255, 0, 0), 0, 100, 2)
+myFlower2 = Flower(color(0, 255, 255), 0, 10, 1)
+    
+def setup():
+size(200,200)
+
+def draw(): 
+  background(255)
+  myFlower1.drive()
+  myFlower1.display()
+  myFlower2.drive()
+  myFlower2.display()
+
 
 ### **3-4.** (2pts) Creation
 
@@ -148,8 +249,45 @@ Let the user pick the position of the element using the mouse (using the mouse p
 
 Make sure the element is drawn first in the sequence of draw calls. 
 
+
+
 ### **3-5.** (2pts) Brushes
 
 Create a second object. Change the shape that is placed when the interactor presses a key. You will want to present the controls as text instructing the interactor as to which keys to press.
 
 As before, you may place your broken code or attempts in comments along with the rationale behind what all you tried to get it to work. 
+#%%
+#Code from carProcessing.py:
+# Even though there are multiple objects, we still only need one class. 
+# No matter how many cookies we make, only one cookie cutter is needed.
+class Car(object):
+# The Constructor is defined with arguments.
+    def __init__(self, c, xpos, ypos, xspeed):
+        self.c = c
+        self.xpos = xpos
+        self.ypos = ypos
+        self.xspeed = xspeed
+        
+    def display(self):
+        stroke(0)
+        fill(self.c)
+        rectMode(CENTER)
+        rect(self.xpos, self.ypos, 20, 10);
+    
+    def drive(self):
+        self.xpos = self.xpos + self.xspeed;
+        if self.xpos > width:
+            self.xpos = 0
+    
+myCar1 = Car(color(255, 0, 0), 0, 100, 2)
+myCar2 = Car(color(0, 255, 255), 0, 10, 1)
+    
+def setup():
+size(200,200)
+
+def draw(): 
+  background(255)
+  myCar1.drive()
+  myCar1.display()
+  myCar2.drive()
+  myCar2.display()
