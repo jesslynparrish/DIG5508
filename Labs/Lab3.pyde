@@ -41,7 +41,16 @@ class grass(object):
         rectMode(CENTER)
         rect(self.xpos, self.ypos, 30, 30)
         
+class stopsign(object):
+    def __init__(self, xpos, ypos):
+         self.xpos = xpos
+         self.ypos = ypos
+    def display(self):
+        stroke(0)
+        fill(color(252,28,3))
+        triangle(self.xpos, self.ypos)
         
+               
 import random 
 myCar1 = Car(color(255, 0, 0), 0, 100, 2)
 myCar2 = Car(color(0, 255, 255), 0, 10, 1)
@@ -73,11 +82,22 @@ def keyPressed():
         myCar1.xspeed = newspeed()
     if (key == 'b'):
         myCar2.xspeed = newspeed()
+    if (key == 'g'):
+        grasstype = 0
+    if (key == 'h'):
+        println("pressed")
+        grasstype = 1
 
+#create grass when mouse is pressed
 def mousePressed():
     if (grasstype == 0):
         grasses.append(grass(mouseX, mouseY))
-                     
+        println("grass")
+    if (grasstype == 1):
+        grasses.append(stopsign(mouseX, mouseY))
+        println("stop sign")
+#create stop sign when key is pressed
+
 def draw(): 
   background(255)
   myCar1.drive()
@@ -89,4 +109,7 @@ def draw():
   for i in grasses:
       i.display()
   if (grasstype == 0):
-      instruction = "click anywhere to plant some grass"
+      instruction = "click anywhere to plant some grass. press h to place stop signs"
+  if (grasstype == 1):
+      instruction = "click to place stop sign. press g to return to planting grass"
+  text(instruction, 100, 160, 180, 30)
