@@ -1,0 +1,77 @@
+Final projects are due the class after Thanksgiving
+For the final exam, it's a week-long online final - we can either take it from class withs Murray there or we can take it at home.
+Today we're doing a cumulative review and finalize project proposal and get Murray's approval
+Weekly reflections are now on the final project
+Final exam is on content only through chapter 11
+Add a final project directory to your Github with a readme.md
+
+Final exam contents:100 pts total
+    files, programs, variables & values, functions, logic (if/else), iteration, classes, regular expressions, processing, unity
+    10 pts each in the following categories
+
+Files: 
+    files in terms of OS on your phone, computer, etc.
+    stored in the background of a programshow are files used in context of OS, what is a file, file type, how does OS treat file, how to describe location of a file
+    *if you're unsure about something it's best to look it up
+Programs:
+    what is a program? things that do things
+    set of instructions, a fixed finite set of instructions a computer follows
+    uses bits - data/information
+    programs are instructions & data
+    difference between instructions and data
+    which program treats sourcecode as data - text editors treat code as data
+    user input - can be seen as data (key presses, mouse movement), input is making data avaialable to a program
+    programs are complicated artifacts in that they're designed for different purposes and there's different perspectives from both the programmer and the user
+    final exam will have questions like "is __ input"
+    take input and produce output
+Variables and Values:
+    a variable is a space allocated in memory by giving it a name/symbol
+    can't be a number or a keyword in the language 
+    a value is what's stored inside of the variable (i think)
+        can also be prescribed into the program itself (called literal)
+    literal: a value in the source code that is the value represented
+    values can exist in a program and be produced in a program without variables
+    we use variables to refer to something - they're for the programmer (and collaborator) to help them read code and keep track of which variable is which
+    varables are names bound to valuesvalue can change over time through assignment ("=" operator)
+    values have a time such as string, 
+    read a = 1 as "a is assigned the value of 1"
+    a primative value is a base type (int char, float, double)
+    *remember for some questions, use your python interpreter to check the options
+Files and Folders:
+    Files:
+        data stored on a disk
+        have a location (path) which identifies where to find themhave a name, a string and constists of a base name and extension (helps identify type of file)
+    Folders:
+        represent a location on diskused to collect files and Foldersarranged as a tree where each folder has a parent folder and children
+        format of paths (including separator) are determined by the shell
+        for windows, includes drive letter (c:\) and baclslash separator "\"
+        for unix and mac (and git bash), forward slash is used "/"
+Strings & Arrays:
+    locations and memories you can access through a variable (i think)
+    when you take one location of memory and have 2 variables point to it - this is called aliasing
+    Immutable: once a string is assigned, it can't be changed
+Functions: how you bundle code together to execute it with different values
+    argument - data passed into a functions
+    have their own "namespace" where variables are not available outside of the function
+    in def foo(a), a is a parameter
+    values provided to a function are called arguments and are bound to parameters, the named variablesreturn statement is used to pass values back to the calling expressions
+Iterations, For Loops:
+    a way of doing something (with a few lines of code) for each thing inside an Array
+Regular expressions:
+Processing:
+    2 main functions and how used: draw & setup
+Unity:
+    editor that takes in program code and models to create programs for many platforms
+Classes:
+    we used these in Lab 3
+    sets of functions including an initialization function
+    be able to tell which class stores which value (i.e. Lab 3 for reference, how classes are created)
+
+End of Review
+
+
+Programming is breaking large problems into smaller problems
+
+
+
+
