@@ -31,3 +31,4 @@ Okay, goal for this final project: CREATE SOMETHING FUN IN PROCESSING!
 
 Does it go beyond what we've described/done in class? (we can tackle a simple problem)
 Encourages us to stay below 100 lines of code total (more than 5-10 lines, but less than 100)
+*If you fail in what you plan to make, explain and detail what went wrong
