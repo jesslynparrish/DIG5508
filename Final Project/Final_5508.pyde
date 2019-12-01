@@ -1,4 +1,4 @@
-#Goal is to create a function so that when the mouse is clicked a triangle is placed at the mouse's position
+#Goal is to create a function so that when the mouse is clicked a rectangle is placed at the mouse's position
 class holidayLight(object):
     def __init__(self, c, xpos, ypos, xspeed):
         self.c = c
